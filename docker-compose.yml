@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  koobjoob-pg:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=koobjoob
+      - POSTGRESQL_PASSWORD=koobjoob
+      - POSTGRESQL_DATABASE=koobjoob
