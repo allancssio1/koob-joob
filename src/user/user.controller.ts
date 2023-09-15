@@ -10,8 +10,7 @@ export class UserController {
   @IsPublic()
   @Post('user')
   create(@Body() createUserDto: CreateUserDto) {
-    return 'foi';
-    // return this.userService.create(createUserDto);
+    return this.userService.create(createUserDto);
   }
 
   @IsPublic()

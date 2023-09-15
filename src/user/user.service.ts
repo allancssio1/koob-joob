@@ -15,7 +15,15 @@ export class UserService {
   }
 
   async findByEmail(email: string) {
-    const user = await this.prisma.user.findFirst({ where: { email } });
+    console.log(
+      '🚀 ~ file: user.service.ts:18 ~ UserService ~ findByEmail ~ email:',
+      email,
+    );
+    const user = await this.prisma.user.findUnique({ where: { email } });
+    console.log(
+      '🚀 ~ file: user.service.ts:19 ~ UserService ~ findByEmail ~ user:',
+      user,
+    );
     return user || null;
   }
 }

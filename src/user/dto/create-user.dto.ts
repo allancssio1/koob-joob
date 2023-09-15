@@ -1,4 +1,10 @@
-import { IsEmail, IsString, MaxLength, MinLength } from 'class-validator';
+import {
+  IsEmail,
+  IsOptional,
+  IsString,
+  MaxLength,
+  MinLength,
+} from 'class-validator';
 import { User } from '../entities/user.entity';
 
 export class CreateUserDto extends User {
@@ -8,6 +14,7 @@ export class CreateUserDto extends User {
   @IsString()
   name: string;
 
+  @IsOptional()
   @IsString()
   @MinLength(0)
   @MaxLength(200, {
