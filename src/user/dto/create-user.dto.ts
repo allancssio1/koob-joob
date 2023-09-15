@@ -6,9 +6,12 @@ export class CreateUserDto extends User {
   email: string;
 
   @IsString()
-  @MinLength(1)
+  name: string;
+
+  @IsString()
+  @MinLength(0)
   @MaxLength(200, {
     message: 'character limit exceeded',
   })
-  password: string;
+  bio?: string;
 }

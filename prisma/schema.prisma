@@ -14,7 +14,7 @@ model User {
   id         String    @id @unique @default(uuid())
   name       String
   email      String    @unique
-  birthDate  Int?
+  birthDate  DateTime?
   bio        String?
   created_at DateTime? @default(now())
   Post       Post[]

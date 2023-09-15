@@ -2,7 +2,7 @@ export class User {
   id?: string;
   name: string;
   email: string;
-  birthDate: number;
-  bio: string;
+  birthDate?: Date;
+  bio?: string;
   created_at?: Date;
 }
