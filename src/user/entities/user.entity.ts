@@ -2,7 +2,8 @@ export class User {
   id?: string;
   name: string;
   email: string;
-  birthDate?: Date;
+  password: string;
   bio?: string;
+  birthDate?: Date;
   created_at?: Date;
 }

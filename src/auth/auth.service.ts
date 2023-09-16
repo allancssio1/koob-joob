@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { compare } from 'bcrypt';
-import { User } from '../user/entities/user.entity';
+import { User } from 'src/user/entities/user.entity';
 import { UserService } from 'src/user/user.service';
 import { UserPayload } from './models/UserPayload';
 import { JwtService } from '@nestjs/jwt';
@@ -14,7 +14,6 @@ export class AuthService {
   ) {}
 
   login(user: User): UserToken {
-    console.log(' login ~ user:', user);
     const payload: UserPayload = {
       email: user.email,
       sub: user.id,
@@ -27,23 +26,22 @@ export class AuthService {
     };
   }
 
-  async validateUser(email: string) {
-    console.log(
-      '🚀 ~ file: auth.service.ts:31 ~ AuthService ~ validateUser ~ email:',
-      email,
-    );
+  async validateUser(email: string, password: string) {
     const user = await this.userService.findByEmail(email);
-    console.log(
-      '🚀 ~ file: auth.service.ts:31 ~ AuthService ~ validateUser ~ user:',
-      user,
-    );
 
     if (!user || typeof user === 'undefined' || user === null) {
       throw new Error('Email or password is incorrect.');
     }
 
+    const isPasswordValid = await compare(password, user.password);
+
+    if (!isPasswordValid) {
+      throw new Error('Email or password is incorrect.');
+    }
+
     return {
       ...user,
+      password: undefined,
     };
   }
 }

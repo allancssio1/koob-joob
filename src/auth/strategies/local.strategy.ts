@@ -9,11 +9,7 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
     super({ usernameField: 'email' });
   }
 
-  validate(email: string) {
-    console.log(
-      '🚀 ~ file: local.strategy.ts:13 ~ LocalStrategy ~ validate ~ email:',
-      email,
-    );
-    return this.authService.validateUser(email);
+  validate(email: string, password: string) {
+    return this.authService.validateUser(email, password);
   }
 }
