@@ -10,8 +10,8 @@ import {
 } from '@nestjs/common';
 import { PostsService } from './posts.service';
 import { PostDto } from './dto/post.dto';
-import { UserRequest } from 'src/interfaces/userRequest';
-import { IsPublic } from 'src/auth/decorators/is-public.decorator';
+import { UserRequest } from '../interfaces/userRequest';
+import { IsPublic } from '../auth/decorators/is-public.decorator';
 
 @Controller('posts')
 export class PostsController {

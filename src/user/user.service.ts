@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 import { hash } from 'bcrypt';
 import { UpdateUserDto } from './dto/update-user.dto';
 
@@ -20,7 +20,7 @@ export class UserService {
 
     return {
       ...user,
-      password: undefined,
+      password: null,
     };
   }
 
