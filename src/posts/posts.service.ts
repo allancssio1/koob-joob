@@ -2,17 +2,16 @@ import { Injectable } from '@nestjs/common';
 import { PostDto } from './dto/post.dto';
 import { PrismaService } from '../prisma/prisma.service';
 import { Post } from '@prisma/client';
-import { UserRequest } from '../interfaces/userRequest';
 
 @Injectable()
 export class PostsService {
   constructor(private readonly prisma: PrismaService) {}
 
-  async create(data: PostDto, request: UserRequest) {
+  async create(data: PostDto, userId: string) {
     const post = await this.prisma.post.create({
       data: {
         ...data,
-        userId: request.user.id,
+        userId,
       },
     });
     return post ?? null;

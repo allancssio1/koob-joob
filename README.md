@@ -22,52 +22,81 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+<br />
+<div align="center">
+  <h3 align="center">Allan Cássio - Sitcon</h3>
 
-```bash
-$ npm install
-```
+  <p align="center">
+   Um projeo solicitado pela equipe tecnica da Sitcon Tecnologia.
+</div>
 
-## Running the app
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-```bash
-# development
-$ npm run start
+Conceito: Uma clínica afim de agilizar seu processo de solicitação de exames laboratoriais ou consultas. Onde terão os dados do paciente, profissional que irá atendê-lo e o dia e a hora da solicitação. 
 
-# watch mode
-$ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
+### Built With
 
-## Test
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-```bash
-# unit tests
-$ npm run test
+* ![Node.JS](https://img.shields.io/badge/-Node.JS-0D1117?style=for-the-badge&logo=node.js&labelColor=0D1117&textColor=0D1117)&nbsp;
+* ![React.js](https://img.shields.io/badge/-React.js-0D1117?style=for-the-badge&logo=react&labelColor=0D1117)&nbsp;
+* ![Typescript](https://img.shields.io/badge/-Typescript-0D1117?style=for-the-badge&logo=typescript&labelColor=0D1117)&nbsp;
+* ![PrismaIO](https://img.shields.io/badge/-Prisma-0D1117?style=for-the-badge&logo=prisma&labelColor=0D1117)&nbsp;
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
-```
+<!-- GETTING STARTED -->
+## Getting Started
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Prerequisites
 
-## Stay in touch
+Tecnologias usadas para este projeto.
+* npm
+  ```sh
+  npm -v ^8.0.0
+  ```
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+* Node
+  ```sh
+  node -v ^16.0.0
+  ```
 
+### Installation
+
+Siga estes passos para conseguir rodar o projeto.
+
+1. Clone o repositório
+   ```sh
+   git clone https://github.com/allancssio1/Allan-Cassio_Sitcon.git
+   ```
+2. Abra dois terminais para rodar esse projeto
+3. Em um terminal entre na pasta
+   ```sh
+   cd Allan-Cassio_Sitcon/api
+   ```
+4. Em outro terminal entre na pasta
+   ```sh
+   cd Allan-Cassio_Sitcon/client
+   ```
+5. Instale as depentencias com NPM em cada um dos terminais
+   ```sh
+   npm install
+   ```
+6. Rode a api do projeto em cada um dos terminais
+   ```sh
+   npm run start
+   ```
+7. Acesse o navegador com a URL
+   ```sh
+   http://localhost:5173
+   ```
+
+
+<!-- LICENSE -->
 ## License
 
-Nest is [MIT licensed](LICENSE).
+Distributed under the MIT License. See `LICENSE.txt` for more information.

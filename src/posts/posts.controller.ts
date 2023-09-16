@@ -19,7 +19,7 @@ export class PostsController {
 
   @Post()
   create(@Body() data: PostDto, @Req() request: UserRequest) {
-    return this.postsService.create(data, request);
+    return this.postsService.create(data, request.user.id);
   }
 
   @IsPublic()
