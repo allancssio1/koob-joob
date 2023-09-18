@@ -5,10 +5,16 @@ import { AuthModule } from './auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
 import { PostsModule } from './posts/posts.module';
-import { DatabaseModule } from './database/database.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [PrismaModule, UserModule, PostsModule, AuthModule, DatabaseModule],
+  imports: [
+    PrismaModule,
+    UserModule,
+    PostsModule,
+    AuthModule,
+    ConfigModule.forRoot(),
+  ],
   controllers: [],
   providers: [
     {
